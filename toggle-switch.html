@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+      <style>
+            input[type="checkbox"] {
+                  position: relative;
+                  /* visibility: hidden; */
+                  width: 0;
+                  height: 0;
+            }
+
+            input[type="checkbox"]:before {
+                  visibility: visible;
+                  position: relative;
+                  display: block;
+                  width: 55px;
+                  height: 24px;
+                  border: 1px solid #99AEBE;
+                  border-radius: 50px;
+                  content: "No";
+                  padding-left: 30px;
+                  padding-top: 4px;
+                  text-transform: unset;
+                  font-weight: bold;
+                  color: #eee;
+                  font-size: 12px;
+                  box-sizing: border-box;
+                  background: #99AEBE;
+                  border: 1px solid #eee;
+            }
+
+
+            input[type="checkbox"]:after {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 3px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00d";
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  color: #99AEBE;
+                  padding-top: 4px;
+                  padding-left: 5px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            }
+
+
+            input[type="checkbox"]:checked:focus::before {
+                  outline: 1px solid rgba(85, 83, 83, 0.445);
+
+            }
+
+            input[type="checkbox"]:focus::before {
+                  outline: 1px solid rgba(85, 83, 83, 0.445);
+
+            }
+
+            input[type="checkbox"]:focus {
+                  outline: none;
+
+            }
+
+            input[type="checkbox"]:checked:before {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: relative;
+                  display: block;
+                  width: 55px;
+                  height: 24px;
+                  border: 1px solid #313338;
+                  border-radius: 50px;
+                  content: "Yes";
+                  padding-left: 8px;
+                  padding-top: 5px;
+                  text-transform: unset;
+                  font-weight: bold;
+                  color: #eee;
+                  font-size: 11px;
+                  box-sizing: border-box;
+                  background: #51A351;
+                  border: 1px solid #eee;
+            }
+
+
+
+            input[type="checkbox"]:checked:after {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 32px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00c";
+                  color: #51A351;
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  content: "\f00c";
+                  padding-top: 4px;
+                  padding-left: 4px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            }
+
+
+
+
+            /* Disabled Property................. */
+
+
+
+            input[type="checkbox"]:checked:disabled:before {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: relative;
+                  display: block;
+                  width: 55px;
+                  height: 24px;
+                  border: 1px solid #313338;
+                  border-radius: 50px;
+                  content: "Yes";
+                  padding-left: 8px;
+                  padding-top: 5px;
+                  text-transform: unset;
+                  font-weight: bold;
+                  color: #eee;
+                  font-size: 11px;
+                  box-sizing: border-box;
+                  background: #D3E8D3;
+                  border: 1px solid #eee;
+            }
+
+            input[type="checkbox"]:checked:disabled:after {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 32px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00c";
+                  color: #D3E8D3;
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  content: "\f00c";
+                  padding-top: 4px;
+                  padding-left: 4px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            }
+
+            input[type="checkbox"]:disabled::after {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 3px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00d";
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  color: #D6DFE5;
+                  padding-top: 4px;
+                  padding-left: 5px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            }
+
+            input[type="checkbox"]:disabled::before {
+                  visibility: visible;
+                  position: relative;
+                  display: block;
+                  width: 55px;
+                  height: 24px;
+                  border: 1px solid #99AEBE;
+                  border-radius: 50px;
+                  content: "No";
+                  padding-left: 30px;
+                  padding-top: 4px;
+                  text-transform: unset;
+                  font-weight: bold;
+                  color: #eee;
+                  font-size: 12px;
+                  box-sizing: border-box;
+                  background: #D6DFE5;
+                  border: 1px solid #eee;
+            }
+
+            
+
+
+            /* input[type="checkbox"]:after:disabled {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 32px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00c";
+                  color: #31afe5;
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  content: "\f00c";
+                  padding-top: 4px;
+                  padding-left: 4px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            }
+
+
+            input[type="checkbox"] :disabled:before {
+                  visibility: visible;
+                  position: relative;
+                  display: block;
+                  width: 55px;
+                  height: 24px;
+                  border: 1px solid #99AEBE;
+                  border-radius: 50px;
+                  content: "No";
+                  padding-left: 30px;
+                  padding-top: 4px;
+                  text-transform: unset;
+                  font-weight: bold;
+                  color: #eee;
+                  font-size: 12px;
+                  box-sizing: border-box;
+                  background: #606060;
+                  border: 1px solid #eee;
+            }
+
+
+            input[type="checkbox"] :disabled:after {
+                  -webkit-transition: all .3s;
+                  visibility: visible;
+                  position: absolute;
+                  top: 2px;
+                  left: 3px;
+                  display: block;
+                  width: 20px;
+                  background-color: white;
+                  height: 20px;
+                  border-radius: 50%;
+                  content: "\f00d";
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  font-size: 13px;
+                  color: #606060;
+                  padding-top: 4px;
+                  padding-left: 5px;
+                  box-sizing: border-box;
+                  display: inline-block;
+            } */
+      </style>
+</head>
+
+<body>
+      <div>
+            <input type="checkbox" checked />
+      </div>
+
+      <br>
+
+      <div>
+            <input type="checkbox" />
+      </div>
+
+      <br>
+
+      <div>
+            <input type="checkbox" disabled checked />
+      </div>
+
+      <br>
+
+      <div>
+            <input type="checkbox" disabled />
+      </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
